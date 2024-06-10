@@ -35,13 +35,7 @@ export const getUserAgentApp = ({
   }
 };
 
-export const getScopes = (graphScopes?: string[]) => {
-  const scopes = graphScopes || [];
-  if (!scopes.find((el: string) => el.toLowerCase() === "user.read")) {
-    scopes.push("user.read");
-  }
-  return scopes;
-};
+export const getScopes = (graphScopes?: string[]) => { const scopes = graphScopes || ['user.read']; return scopes; };
 
 export const getLogger =
   (isDebugMode?: boolean) =>
